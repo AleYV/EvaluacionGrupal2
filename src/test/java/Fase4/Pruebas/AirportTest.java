@@ -127,7 +127,7 @@ public class AirportTest {
         @DisplayName("Cuando tenemos un pasajero regular")
         class RegularPassenger{
             @Test
-            @DisplayName("Entonces no puede agregarlo o eliminarlo de un vuelo de primera clase")
+            @DisplayName("Entonces no puede agregarlo ni eliminarlo de un vuelo de primera clase")
             void testPremiumFlightRegularPassenger(){
                 assertAll("Verifica todas las condiciones para un pasajero regular y un vuelo premium",
                         () -> assertFalse(premiumFlight.addPassenger(jessica)),
