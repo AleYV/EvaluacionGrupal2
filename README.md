@@ -12,22 +12,28 @@ No es del 100% debido a que en la clase Flight se ah definido dos tipos de vuelo
 Business
 
 **Pregunta 2** ¿Por qué John tiene la necesidad de refactorizar la aplicación?  
-Comparando el avance entre la Fase 1 y 2, John refactoriza el código para evitar la redefinición de un objeto al momento de utilizarlo, para que el código sea más
-entendible sin cambiar la funcionalidad de la misma y alterar los test. 
+●Mejor estructuración del código  
+Cuando se necesite añadir más tipos de vuelo, la estructura selectiva va a ir incrementándose, haciendo que el tiempo de ejecución sea cada vez mayor.      
+
+●Legibilidad  
+Al usar el polimorfismo, hay un mayor entendimiento de cada clase instanciada y su función en el código sin alterarla.
 
 
 **Pregunta 3**  
-● ¿Cuál es la cobertura del código ?  
-Del 100%
+● ¿Cuál es la cobertura del código?  
+Del 100%. Esto lo podemos comprobar al ejecutar las pruebas.
 
 ● ¿La refactorización de la aplicación TDD ayudó tanto a mejorar la calidad del código?  
-Si, porque con la refactorización hecha en la Fase 2, se mejoró el entendimiento de las clases y en la refactorización hecha en la Fase 3 con el método getPassengerList,
-nos da a entender que el retorno es una lista de pasajeros.  
+Si, por dos motivos:
+1. Mejora en el tiempo de ejecución  
+Al tener los tipos de vuelo separados por clases, ya no se necesita el uso de una estructura selectiva para diferenciarlos y que el código sea más reducido.
+2. Código escalable  
+Al estar usando la técnica de programación TDD, hace que el programa pueda aceptar más clases y quien quiera aportar en el proyecto pueda entender como funciona.
 
-**Pregunta 4**  
+**Pregunta 4** 
 ¿En qué consiste está regla relacionada a la refactorización?. Explica como se relaciona al problema dado en la evaluación.  
 En caso existan dos instancias similares y se desee añadir otra instancia similar, esta regla nos dice que se debe crear un nuevo método que agrupe estas similitudes y
 así el código sea más escalable.  
-En la Fase 3, las clases BussinessFlight y EconomicFlight tienen códigos similares; y se quiere agregar la clase PremiumFlight es cuál tambien tendría código similar a 
+En la Fase 3, las clases BussinessFlight y EconomicFlight tienen códigos similares; y se quiere agregar la clase PremiumFlight es cuál también tendría código similar a 
 las clases mencionadas; por lo que convendría utilizar la Regla de Tres en la unidad de pruebas 
 
